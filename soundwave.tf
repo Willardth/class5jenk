@@ -7,17 +7,14 @@ terraform {
   }
 } 
 provider "google" {
-  credentials = "secret.json"
+  credentials = "class-5-freedom-2a4e9c52a833.json"
   project     = "class-5-freedom"
   
   region      = "us-central1"
   
 }
 
- variable "secret" {
-  default = "secret"
-  description = "This is a secret key"
- }
+ 
  resource "google_compute_instance" "vm" {
   name         = "test-instance"
   machine_type = "e2-micro"
